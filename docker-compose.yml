@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  test:
+    build: ./docker/
+    entrypoint: "/bin/bash"
+    volumes:
+      - .:${PWD}
+    working_dir: ${PWD}
+    tty: true
