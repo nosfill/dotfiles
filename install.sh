@@ -12,17 +12,17 @@ if [ ! -d ${DOT_DIR} ]; then
     if [[ $? -eq 0 ]] ; then
         git clone https://github.com/nosfill/dotfiles.git ${DOT_DIR}
     elif [[ ${IS_CURL} -eq 0 || ${IS_WGET} -eq 0 ]] ; then
-        TARBALL="https://github.com/nosfill/dotfiles/archive/master.tar.gz"
+        TARBALL="https://github.com/nosfill/dotfiles/archive/main.tar.gz"
 
         if [[ ${IS_CURL} -eq 0 ]]; then
-            curl -L ${TARBALL} -o master.tar.gz
+            curl -L ${TARBALL} -o main.tar.gz
         else
             wget ${TARBALL}
         fi
 
-        tar -zxvf master.tar.gz
-        rm -f master.tar.gz
-        mv -f dotfiles-master "${DOT_DIR}"
+        tar -zxvf main.tar.gz
+        rm -f main.tar.gz
+        mv -f dotfiles-main "${DOT_DIR}"
     else
         echo "curl or wget or git required"
         exit 1

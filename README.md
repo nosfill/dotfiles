@@ -5,7 +5,7 @@ This repository has a nosfill's dotfiles and Makefile that set dotfiles.
 ## Install
 
 ```bash
-bash -c "source $(curl -fsSL https://raw.githubusercontent.com/nosfill/dotfiles/master/install.sh)"
+bash -c "source $(curl -fsSL https://raw.githubusercontent.com/nosfill/dotfiles/main/install.sh)"
 ```
 
 ## Test
