@@ -37,4 +37,4 @@ for i in ${CANDIDATE[@]}; do
 done
 
 # Deploy dotfiles
-# source ${SCRIPT_DIR}etc/install/linuxbrew.sh
+ln -s ${DOT_DIR}/.config/fish/config.fish ~/.config/fish/config.fish
