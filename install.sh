@@ -37,4 +37,4 @@ for i in ${CANDIDATE[@]}; do
 done
 
 # Deploy dotfiles
-ln -fs ${DOT_DIR}/config/fish/config.fish ~/.config/fish/config.fish
+source ${DOT_DIR}/deploy.sh
