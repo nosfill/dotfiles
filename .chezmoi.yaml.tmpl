@@ -1,0 +1,9 @@
+scriptEnv:
+  XDG_CONFIG_HOME: "{{ .chezmoi.homeDir }}/.config"
+  XDG_DATA_HOME: "{{ .chezmoi.homeDir }}/.local/share"
+  XDG_CACHE_HOME: "{{ .chezmoi.homeDir }}/.cache"
+  XDG_STATE_HOME: "{{ .chezmoi.homeDir }}/.local/state"
+  XDG_BIN_HOME: "{{ .chezmoi.homeDir }}/.local/bin"
+
+edit:
+  command: "nvim"

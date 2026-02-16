@@ -1,0 +1,61 @@
+format = """
+$os\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$cmd_duration\
+$line_break\
+$character\
+"""
+
+continuation_prompt = '[❯❯ ](fg:blue)'
+
+[os]
+format = "[$symbol](bold white)"
+disabled = false
+
+[os.symbols]
+Linux = " "
+Macos = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[cmd_duration]
+min_time = 5000 # ms
+
+[directory]
+truncation_length = 5
+truncation_symbol = ".../"
+truncate_to_repo = false
+read_only = " 󰌾" #鍵のicon
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+
+[git_branch]
+symbol = " "
+
+[git_status]
+disabled = false
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "red bold"
+stashed = '\$${count}'
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕${count}"
+conflicted = "=${count}"
+deleted = "✘${count}"
+renamed = "»${count}"
+modified = "!${count}"
+staged = "+${count}"
+untracked = "?${count}"
+
+[rust]
+symbol = "" # nf-dev-rust
+format = '[  $symbol $version](red)' # nf-pl-right_soft_divider
